@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 18</title>
+</head>
+<body>
+    <h2>Mine cadastro</h2>
+    <!-- teg para criar uma caixa de informaçao -->
+    <input id="in_nome" placeholder="seu nome"><br>
+ <input id="in_bairro" placeholder="seu bairro"> <br>
+    <input id="in_idade" placeholder="sua idade"> <br>
+    <!--  atalho para criar um id
+        input#in_idade -->
+        <button onclick="cadastrar()">Fazer cadastro</button>
+        <button onclick="cadastrar_bonitinho()">Fazer cadastro bonitinho </button>
+        <button onclick="cadastrar_lindo()">Fazer cadastro lindo! </button>
+        <div id="div_cadastro"></div>
+    </body> 
+</html>
+<script>
+    function cadastrar(){
+alert(in_nome.value);
+alert(in_bairro.value);
+alert(in_idade.value);
+    }
+// colocar mensagem no alert
+    function cadastrar_bonitinho(){
+        alert(`Você se cahama ${in_nome.value}`);
+        alert(`Você mora em ${in_bairro.value} city`);
+        alert(`Você tem ${in_idade.value} anos`);
+    }
+// usando crase podemos quebrar linha normalmente
+    function cadastrar_lindo(){
+     div_cadastro.innerHTML = `
+     nome cadastrado: <b>${in_nome.value}</b><br>
+     bairro cadastrado: <b>${in_bairro.value}</b><br>
+     idade cadastrada: <span style='color:red'>${in_idade.value}</span><br> `;   
+    }
+</script>

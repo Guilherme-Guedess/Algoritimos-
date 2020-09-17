@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 19</title>
+</head>
+<body>
+    primeiro numero: <input id="in_numero1"><br>
+    segundo numero: <input id="in_numero2"><br>
+
+    <button onclick="subtrair()">Subtrair</button> <br>
+    <button>Multiplicar</button> <br>
+    <button onclick="dividir()">Dividir</button><br>
+    <button>Potencia</button><br>
+    <button onclick="somar()">Somar</button><br>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    /* aqui criamos uma variavel chamada "subtraçao"
+     é uma informação que o programa pode usardepos,
+      quantas vezes quiser
+      a variavel se chama var*/
+    function subtrair(){
+        var subtracao = in_numero1.value - in_numero2.value;
+        // aqui usamos a variavel como expressao na interpolação
+        div_resultado.innerHTML = `Subtraçao: ${subtracao}`;
+    }
+    function dividir(){
+        var divisao = in_numero1.value / in_numero2.value;
+       div_resultado.innerHTML = `Divisao: ${divisao}`;
+    }
+    function somar(){
+        var adicao = Number(in_numero1.value) + Number(in_numero2.value);
+        div_resultado.innerHTML = `Somar: ${adicao}`;
+    }
+</script>
